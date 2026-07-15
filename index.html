@@ -276,6 +276,11 @@
             margin-bottom: 4px;
         }
 
+        .hero-content .nationality .flag {
+            font-size: 22px;
+            vertical-align: middle;
+        }
+
         .hero-content .subtitle {
             font-size: 20px;
             font-weight: 500;
@@ -405,6 +410,37 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        /* ========== SOCIAL LINKS ========== */
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 8px 18px;
+            border-radius: 50px;
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .social-link .social-icon {
+            font-size: 18px;
         }
 
         /* ========== SECTION TITLES ========== */
@@ -699,6 +735,115 @@
             font-weight: 700;
         }
 
+        /* ========== TRAINING OFFERS ========== */
+        .training-offers {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .training-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(10, 36, 99, 0.04);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .training-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .training-card .training-header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 16px 24px;
+        }
+
+        .training-card .training-header h4 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .training-card .training-header .training-sub {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 400;
+        }
+
+        .training-card .training-body {
+            padding: 20px 24px;
+        }
+
+        .training-card .training-body ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .training-card .training-body ul li {
+            font-size: 14px;
+            color: var(--gray);
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .training-card .training-body ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        .training-card .training-pricing {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            padding: 16px 24px;
+            background: rgba(10, 36, 99, 0.03);
+            border-top: 1px solid rgba(10, 36, 99, 0.04);
+        }
+
+        .training-card .training-pricing .price-item {
+            text-align: center;
+        }
+
+        .training-card .training-pricing .price-item .amount {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .training-card .training-pricing .price-item .currency {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray);
+        }
+
+        .training-card .training-pricing .price-item .label {
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+        .training-card .training-cta {
+            display: block;
+            text-align: center;
+            padding: 14px;
+            background: var(--secondary);
+            color: var(--primary);
+            font-weight: 700;
+            transition: var(--transition);
+            font-size: 15px;
+        }
+
+        .training-card .training-cta:hover {
+            background: var(--secondary-light);
+        }
+
         /* ========== PUBLICATIONS ========== */
         .pub-grid {
             display: grid;
@@ -840,37 +985,6 @@
             background: var(--primary);
         }
 
-        /* ========== SOCIAL LINKS ========== */
-        .social-links {
-            display: flex;
-            gap: 16px;
-            margin-top: 16px;
-            flex-wrap: wrap;
-        }
-
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.06);
-            padding: 10px 20px;
-            border-radius: 50px;
-            color: var(--white);
-            font-size: 14px;
-            font-weight: 500;
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .social-link:hover {
-            background: rgba(255, 255, 255, 0.12);
-            transform: translateY(-2px);
-        }
-
-        .social-link .social-icon {
-            font-size: 20px;
-        }
-
         /* ========== CONTACT ========== */
         .contact-section {
             background: var(--primary);
@@ -933,7 +1047,6 @@
             color: var(--secondary-light);
         }
 
-        /* Social icons in contact */
         .contact-socials {
             display: flex;
             gap: 12px;
@@ -949,7 +1062,7 @@
             height: 48px;
             background: rgba(255, 255, 255, 0.06);
             border-radius: 50%;
-            font-size: 24px;
+            font-size: 22px;
             transition: var(--transition);
             border: 1px solid rgba(255, 255, 255, 0.06);
         }
@@ -957,45 +1070,6 @@
         .contact-socials .social-icon-link:hover {
             background: rgba(255, 255, 255, 0.12);
             transform: translateY(-3px);
-        }
-
-        .contact-refs {
-            background: rgba(255, 255, 255, 0.04);
-            padding: 28px;
-            border-radius: var(--radius);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .contact-refs h4 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .contact-refs .ref {
-            margin-bottom: 16px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-        }
-
-        .contact-refs .ref:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .contact-refs .ref .name {
-            font-weight: 600;
-        }
-
-        .contact-refs .ref .role {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .contact-refs .ref .email {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.6);
         }
 
         /* ========== FOOTER ========== */
@@ -1018,6 +1092,9 @@
                 grid-template-columns: 1fr 1fr;
             }
             .conf-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .training-offers {
                 grid-template-columns: 1fr 1fr;
             }
         }
@@ -1107,6 +1184,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .training-offers {
+                grid-template-columns: 1fr;
+            }
+
             .contact-grid {
                 grid-template-columns: 1fr;
             }
@@ -1138,8 +1219,12 @@
             }
 
             .social-link {
-                padding: 8px 16px;
+                padding: 6px 14px;
                 font-size: 13px;
+            }
+
+            .social-link .social-icon {
+                font-size: 16px;
             }
 
             .conf-section-title {
@@ -1150,6 +1235,14 @@
                 width: 42px;
                 height: 42px;
                 font-size: 20px;
+            }
+
+            .training-card .training-pricing {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .training-card .training-pricing .price-item .amount {
+                font-size: 18px;
             }
         }
 
@@ -1188,12 +1281,16 @@
             }
 
             .social-link {
-                padding: 6px 12px;
-                font-size: 12px;
+                padding: 4px 10px;
+                font-size: 11px;
             }
 
             .social-link .social-icon {
-                font-size: 16px;
+                font-size: 14px;
+            }
+
+            .training-card .training-pricing {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -1206,13 +1303,14 @@
         <div class="container">
             <a href="#" class="logo">Yasser<span>Boina</span></a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#formation">Formation</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#experiences">Expériences</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#conferences">Conférences</a></li>
-                <li><a href="#contact" class="nav-cta">Me contacter</a></li>
+                <li><a href="#about" data-key="nav_about">À propos</a></li>
+                <li><a href="#formation" data-key="nav_education">Formation</a></li>
+                <li><a href="#competences" data-key="nav_skills">Compétences</a></li>
+                <li><a href="#experiences" data-key="nav_experience">Expériences</a></li>
+                <li><a href="#publications" data-key="nav_publications">Publications</a></li>
+                <li><a href="#conferences" data-key="nav_conferences">Conférences</a></li>
+                <li><a href="#formations-proposees" data-key="nav_training">Formations</a></li>
+                <li><a href="#contact" class="nav-cta" data-key="nav_contact">Me contacter</a></li>
             </ul>
             <div style="display:flex;align-items:center;gap:12px;">
                 <div class="lang-toggle" id="langToggle">
@@ -1232,17 +1330,16 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content hidden">
-                <div class="nationality">🇰🇲 Nationalité Comorienne</div>
-                <div class="subtitle">Économiste · Expert en Suivi &amp; Évaluation · Chercheur</div>
+                <div class="nationality"><span class="flag">🇰🇲</span> Nationalité Comorienne</div>
+                <div class="subtitle" data-key="hero_subtitle">Économiste · Expert en Suivi &amp; Évaluation · Chercheur</div>
                 <h1>Yasser <span>Boina</span></h1>
                 <div class="location">📍 14 rue de la médina, Dakar, Sénégal</div>
-                <p class="description">
+                <p class="description" data-key="hero_description">
                     Professionnel dynamique et polyvalent, je combine une solide expertise en analyse de données,
                     modélisation statistique et évaluation d'impact. Ma passion : transformer les données en
                     décisions stratégiques pour un développement durable.
                 </p>
 
-                <!-- SOCIAL LINKS dans le hero -->
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/boina-yasser-49069422b" target="_blank" class="social-link">
                         <span class="social-icon">🔗</span> LinkedIn
@@ -1259,22 +1356,22 @@
                 </div>
 
                 <div class="hero-buttons" style="margin-top:16px;">
-                    <a href="#publications" class="btn-primary">Voir mes publications</a>
-                    <a href="#contact" class="btn-outline-light">Me contacter</a>
+                    <a href="#publications" class="btn-primary" data-key="btn_publications">Voir mes publications</a>
+                    <a href="#contact" class="btn-outline-light" data-key="btn_contact">Me contacter</a>
                 </div>
 
                 <div class="hero-stats">
                     <div class="stat">
                         <h3>5+</h3>
-                        <p>Années d'expérience</p>
+                        <p data-key="stat_experience">Années d'expérience</p>
                     </div>
                     <div class="stat">
                         <h3>12</h3>
-                        <p>Publications &amp; articles</p>
+                        <p data-key="stat_publications">Publications &amp; articles</p>
                     </div>
                     <div class="stat">
                         <h3>17</h3>
-                        <p>Conférences</p>
+                        <p data-key="stat_conferences">Conférences</p>
                     </div>
                 </div>
             </div>
@@ -1291,22 +1388,22 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-text hidden">
-                    <span class="section-label">À propos</span>
-                    <h2 class="section-title">Qui suis-<span>je</span></h2>
-                    <p>
+                    <span class="section-label" data-key="about_label">À propos</span>
+                    <h2 class="section-title" data-key="about_title">Qui suis-<span>je</span></h2>
+                    <p data-key="about_p1">
                         Je suis <span class="highlight">Yasser Boina</span>, économiste et doctorant à l'Université
                         Cheikh Anta Diop de Dakar. Ma carrière est dédiée à l'application rigoureuse des méthodes
                         quantitatives pour évaluer l'impact des politiques publiques, particulièrement dans les
                         domaines de l'emploi, du développement numérique et de l'entrepreneuriat.
                     </p>
-                    <p>
+                    <p data-key="about_p2">
                         Fort d'une expérience en tant que <span class="highlight">Responsable Suivi-Évaluation</span>
                         au ROAJELF et <span class="highlight">Chercheur</span> au Laboratoire d'Économie Publique,
                         je maîtrise l'ensemble de la chaîne de valeur des données : de la collecte sur le terrain
                         (Kobotoolbox, ODK) à la modélisation avancée (R, Python, STATA), en passant par la
                         communication stratégique des résultats.
                     </p>
-                    <p>
+                    <p data-key="about_p3">
                         Membre actif de l'<span class="highlight">Association Sénégalaise d'Évaluation (SÉNÉVAL)</span>,
                         je suis animé par la conviction que des politiques publiques fondées sur des preuves
                         empiriques sont la clé d'un développement inclusif et durable en Afrique.
@@ -1337,53 +1434,53 @@
                         <span class="value">Dakar, Sénégal</span>
                     </div>
                     <div class="stat-row">
-                        <span class="label">🎓 Statut</span>
-                        <span class="value">Doctorant en Sciences Économiques</span>
+                        <span class="label" data-key="about_status_label">🎓 Statut</span>
+                        <span class="value" data-key="about_status_value">Doctorant en Sciences Économiques</span>
                     </div>
                     <div class="stat-row">
-                        <span class="label">📖 Langues</span>
-                        <span class="value">Français (courant), Anglais (intermédiaire), Arabe (intermédiaire)</span>
+                        <span class="label" data-key="about_lang_label">📖 Langues</span>
+                        <span class="value" data-key="about_lang_value">Français (courant), Anglais (intermédiaire), Arabe (intermédiaire)</span>
                     </div>
                     <div class="stat-row">
                         <span class="label">🌍 Nationalité</span>
-                        <span class="value">Comorienne</span>
+                        <span class="value">Comorienne 🇰🇲</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== FORMATION ========== -->
+    <!-- ========== FORMATION ACADÉMIQUE ========== -->
     <section class="section" id="formation">
         <div class="container">
-            <span class="section-label hidden">Parcours académique</span>
-            <h2 class="section-title hidden">Ma <span>formation</span></h2>
-            <p class="section-subtitle hidden">Un parcours d'excellence en économie et statistique à l'UCAD.</p>
+            <span class="section-label hidden" data-key="edu_label">Parcours académique</span>
+            <h2 class="section-title hidden" data-key="edu_title">Ma <span>formation</span></h2>
+            <p class="section-subtitle hidden" data-key="edu_subtitle">Un parcours d'excellence en économie et statistique à l'UCAD.</p>
 
             <div class="timeline">
                 <div class="timeline-item hidden">
-                    <span class="date">Depuis 2022</span>
-                    <h3>Doctorat en Sciences Économiques</h3>
-                    <div class="institution">Université Cheikh Anta Diop de Dakar (UCAD)</div>
-                    <p>Sujet de thèse : « Essais sur les politiques publiques d'emploi au Sénégal ». Utilisation de méthodes économétriques avancées (SDID, GPS) et de données de panel.</p>
+                    <span class="date" data-key="edu_date1">Depuis 2022</span>
+                    <h3 data-key="edu_title1">Doctorat en Sciences Économiques</h3>
+                    <div class="institution" data-key="edu_inst1">Université Cheikh Anta Diop de Dakar (UCAD)</div>
+                    <p data-key="edu_desc1">Sujet de thèse : « Essais sur les politiques publiques d'emploi au Sénégal ». Utilisation de méthodes économétriques avancées (SDID, GPS) et de données de panel.</p>
                 </div>
                 <div class="timeline-item hidden">
-                    <span class="date">2020 – 2021</span>
-                    <h3>Master II – Ingénierie en Statistique Économique et Finance</h3>
-                    <div class="institution">Université Cheikh Anta Diop de Dakar (UCAD)</div>
-                    <p>Spécialisation en modélisation statistique, économétrie financière et analyse des risques.</p>
+                    <span class="date" data-key="edu_date2">2020 – 2021</span>
+                    <h3 data-key="edu_title2">Master II – Ingénierie en Statistique Économique et Finance</h3>
+                    <div class="institution" data-key="edu_inst2">Université Cheikh Anta Diop de Dakar (UCAD)</div>
+                    <p data-key="edu_desc2">Spécialisation en modélisation statistique, économétrie financière et analyse des risques.</p>
                 </div>
                 <div class="timeline-item hidden">
-                    <span class="date">2018 – 2019</span>
-                    <h3>Licence 3 – Analyse Statistique Économique et Finance</h3>
-                    <div class="institution">Université Cheikh Anta Diop de Dakar (UCAD)</div>
-                    <p>Formation approfondie en statistique, économétrie, et analyse de données économiques et financières.</p>
+                    <span class="date" data-key="edu_date3">2018 – 2019</span>
+                    <h3 data-key="edu_title3">Licence 3 – Analyse Statistique Économique et Finance</h3>
+                    <div class="institution" data-key="edu_inst3">Université Cheikh Anta Diop de Dakar (UCAD)</div>
+                    <p data-key="edu_desc3">Formation approfondie en statistique, économétrie, et analyse de données économiques et financières.</p>
                 </div>
                 <div class="timeline-item hidden">
-                    <span class="date">2015 – 2016</span>
-                    <h3>Baccalauréat Série D (Scientifique)</h3>
-                    <div class="institution">JUWA d'Ivembeni, Comores</div>
-                    <p>Baccalauréat scientifique avec mention, spécialité mathématiques.</p>
+                    <span class="date" data-key="edu_date4">2015 – 2016</span>
+                    <h3 data-key="edu_title4">Baccalauréat Série D (Scientifique)</h3>
+                    <div class="institution" data-key="edu_inst4">JUWA d'Ivembeni, Comores</div>
+                    <p data-key="edu_desc4">Baccalauréat scientifique avec mention, spécialité mathématiques.</p>
                 </div>
             </div>
         </div>
@@ -1392,34 +1489,34 @@
     <!-- ========== COMPÉTENCES ========== -->
     <section class="section section-alt" id="competences">
         <div class="container">
-            <span class="section-label hidden">Expertise</span>
-            <h2 class="section-title hidden">Mes <span>compétences</span></h2>
-            <p class="section-subtitle hidden">Un ensemble de compétences techniques et méthodologiques au service de l'évaluation et de la recherche.</p>
+            <span class="section-label hidden" data-key="skills_label">Expertise</span>
+            <h2 class="section-title hidden" data-key="skills_title">Mes <span>compétences</span></h2>
+            <p class="section-subtitle hidden" data-key="skills_subtitle">Un ensemble de compétences techniques et méthodologiques au service de l'évaluation et de la recherche.</p>
 
             <div class="skills-grid">
                 <div class="skill-card hidden">
                     <span class="icon">📊</span>
-                    <h4>Analyse de Données</h4>
+                    <h4 data-key="skill1_title">Analyse de Données</h4>
                     <ul>
-                        <li>Recueil &amp; nettoyage</li>
-                        <li>Analyse économique</li>
-                        <li>Interprétation financière</li>
-                        <li>Visualisation</li>
+                        <li data-key="skill1_1">Recueil &amp; nettoyage</li>
+                        <li data-key="skill1_2">Analyse économique</li>
+                        <li data-key="skill1_3">Interprétation financière</li>
+                        <li data-key="skill1_4">Visualisation</li>
                     </ul>
                 </div>
                 <div class="skill-card hidden">
                     <span class="icon">📐</span>
-                    <h4>Modélisation Statistique</h4>
+                    <h4 data-key="skill2_title">Modélisation Statistique</h4>
                     <ul>
-                        <li>Prévision économique</li>
-                        <li>Évaluation d'impact</li>
-                        <li>Méthodes quantitatives</li>
-                        <li>Méthodes qualitatives</li>
+                        <li data-key="skill2_1">Prévision économique</li>
+                        <li data-key="skill2_2">Évaluation d'impact</li>
+                        <li data-key="skill2_3">Méthodes quantitatives</li>
+                        <li data-key="skill2_4">Méthodes qualitatives</li>
                     </ul>
                 </div>
                 <div class="skill-card hidden">
                     <span class="icon">💻</span>
-                    <h4>Programmation &amp; Outils</h4>
+                    <h4 data-key="skill3_title">Programmation &amp; Outils</h4>
                     <ul>
                         <li>R</li>
                         <li>Python</li>
@@ -1433,33 +1530,33 @@
                 </div>
                 <div class="skill-card hidden">
                     <span class="icon">📋</span>
-                    <h4>Suivi &amp; Évaluation</h4>
+                    <h4 data-key="skill4_title">Suivi &amp; Évaluation</h4>
                     <ul>
-                        <li>Conception de S&amp;E</li>
-                        <li>Indicateurs de performance</li>
-                        <li>Évaluations d'impact</li>
-                        <li>Rapports stratégiques</li>
+                        <li data-key="skill4_1">Conception de S&amp;E</li>
+                        <li data-key="skill4_2">Indicateurs de performance</li>
+                        <li data-key="skill4_3">Évaluations d'impact</li>
+                        <li data-key="skill4_4">Rapports stratégiques</li>
                     </ul>
                 </div>
                 <div class="skill-card hidden">
                     <span class="icon">🎤</span>
-                    <h4>Communication &amp; Présentation</h4>
+                    <h4 data-key="skill5_title">Communication &amp; Présentation</h4>
                     <ul>
-                        <li>Présentation de données</li>
-                        <li>Rédaction scientifique</li>
-                        <li>Recommandations politiques</li>
-                        <li>Formation</li>
+                        <li data-key="skill5_1">Présentation de données</li>
+                        <li data-key="skill5_2">Rédaction scientifique</li>
+                        <li data-key="skill5_3">Recommandations politiques</li>
+                        <li data-key="skill5_4">Formation</li>
                     </ul>
                 </div>
                 <div class="skill-card hidden">
                     <span class="icon">🌍</span>
-                    <h4>Domaines d'application</h4>
+                    <h4 data-key="skill6_title">Domaines d'application</h4>
                     <ul>
-                        <li>Marché du travail</li>
-                        <li>Transformation numérique</li>
-                        <li>Entrepreneuriat</li>
-                        <li>Politiques de développement</li>
-                        <li>Économie africaine</li>
+                        <li data-key="skill6_1">Marché du travail</li>
+                        <li data-key="skill6_2">Transformation numérique</li>
+                        <li data-key="skill6_3">Entrepreneuriat</li>
+                        <li data-key="skill6_4">Politiques de développement</li>
+                        <li data-key="skill6_5">Économie africaine</li>
                     </ul>
                 </div>
             </div>
@@ -1469,111 +1566,182 @@
     <!-- ========== EXPÉRIENCES ========== -->
     <section class="section" id="experiences">
         <div class="container">
-            <span class="section-label hidden">Carrière</span>
-            <h2 class="section-title hidden">Expériences <span>professionnelles</span></h2>
-            <p class="section-subtitle hidden">Un parcours riche au service du développement en Afrique.</p>
+            <span class="section-label hidden" data-key="exp_label">Carrière</span>
+            <h2 class="section-title hidden" data-key="exp_title">Expériences <span>professionnelles</span></h2>
+            <p class="section-subtitle hidden" data-key="exp_subtitle">Un parcours riche au service du développement en Afrique.</p>
 
             <div class="exp-grid">
                 <div class="exp-card hidden">
                     <div class="exp-header">
-                        <h4>Responsable Suivi &amp; Évaluation</h4>
-                        <span class="exp-date">Depuis 2025</span>
+                        <h4 data-key="exp1_title">Responsable Suivi &amp; Évaluation</h4>
+                        <span class="exp-date" data-key="exp1_date">Depuis 2025</span>
                     </div>
-                    <div class="exp-org">Réseau Ouest Africain des Jeunes Femmes Leaders (ROAJELF) – Sénégal</div>
+                    <div class="exp-org" data-key="exp1_org">Réseau Ouest Africain des Jeunes Femmes Leaders (ROAJELF) – Sénégal</div>
                     <ul>
-                        <li>Conception et pilotage du système de suivi-évaluation</li>
-                        <li>Mise en œuvre d'outils de suivi et d'évaluation participatifs</li>
-                        <li>Production d'analyses stratégiques et de rapports d'impact</li>
+                        <li data-key="exp1_1">Conception et pilotage du système de suivi-évaluation</li>
+                        <li data-key="exp1_2">Mise en œuvre d'outils de suivi et d'évaluation participatifs</li>
+                        <li data-key="exp1_3">Production d'analyses stratégiques et de rapports d'impact</li>
                     </ul>
                 </div>
 
                 <div class="exp-card hidden">
                     <div class="exp-header">
-                        <h4>Assistant en Suivi &amp; Évaluation</h4>
-                        <span class="exp-date">Juil. 2024 – Janv. 2025</span>
+                        <h4 data-key="exp2_title">Assistant en Suivi &amp; Évaluation</h4>
+                        <span class="exp-date" data-key="exp2_date">Juil. 2024 – Janv. 2025</span>
                     </div>
-                    <div class="exp-org">Centre International de Recherche et de Formation en Génomique Appliquée (CIGASS)</div>
+                    <div class="exp-org" data-key="exp2_org">Centre International de Recherche et de Formation en Génomique Appliquée (CIGASS)</div>
                     <ul>
-                        <li>Analyse quantitative avancée et analyse de données massives</li>
-                        <li>Suivi des indicateurs de performance</li>
-                        <li>Mise en place d'un plan de travail annuel</li>
+                        <li data-key="exp2_1">Analyse quantitative avancée et analyse de données massives</li>
+                        <li data-key="exp2_2">Suivi des indicateurs de performance</li>
+                        <li data-key="exp2_3">Mise en place d'un plan de travail annuel</li>
                     </ul>
                 </div>
 
                 <div class="exp-card hidden">
                     <div class="exp-header">
-                        <h4>Chercheur</h4>
-                        <span class="exp-date">Juil. 2023 – Aujourd'hui</span>
+                        <h4 data-key="exp3_title">Chercheur</h4>
+                        <span class="exp-date" data-key="exp3_date">Juil. 2023 – Aujourd'hui</span>
                     </div>
-                    <div class="exp-org">Laboratoire d'Économie Publique (LEP) – UCAD</div>
+                    <div class="exp-org" data-key="exp3_org">Laboratoire d'Économie Publique (LEP) – UCAD</div>
                     <ul>
-                        <li>Analyse quantitative avancée et modélisation économique</li>
-                        <li>Analyse de données massives</li>
-                        <li>Rédaction et publication d'articles scientifiques</li>
+                        <li data-key="exp3_1">Analyse quantitative avancée et modélisation économique</li>
+                        <li data-key="exp3_2">Analyse de données massives</li>
+                        <li data-key="exp3_3">Rédaction et publication d'articles scientifiques</li>
                     </ul>
                 </div>
 
                 <div class="exp-card hidden">
                     <div class="exp-header">
-                        <h4>Stagiaire en Suivi-Évaluation</h4>
-                        <span class="exp-date">Janv. – Juin 2023</span>
+                        <h4 data-key="exp4_title">Stagiaire en Suivi-Évaluation</h4>
+                        <span class="exp-date" data-key="exp4_date">Janv. – Juin 2023</span>
                     </div>
-                    <div class="exp-org">Ministère de la Santé et de l'Action Sociale du Sénégal (MSAS)</div>
+                    <div class="exp-org" data-key="exp4_org">Ministère de la Santé et de l'Action Sociale du Sénégal (MSAS)</div>
                     <ul>
-                        <li>Collecte et analyse de données (ODK, ONA, CSpro, Kobotoolbox)</li>
-                        <li>Rédaction de rapports et de recommandations</li>
-                        <li>Suivi des indicateurs de performance</li>
-                        <li>Utilisation d'outils statistiques : R, STATA, SPSS</li>
+                        <li data-key="exp4_1">Collecte et analyse de données (ODK, ONA, CSpro, Kobotoolbox)</li>
+                        <li data-key="exp4_2">Rédaction de rapports et de recommandations</li>
+                        <li data-key="exp4_3">Suivi des indicateurs de performance</li>
+                        <li data-key="exp4_4">Utilisation d'outils statistiques : R, STATA, SPSS</li>
                     </ul>
                 </div>
 
                 <div class="exp-card hidden">
                     <div class="exp-header">
-                        <h4>Superviseur d'Enquêtes</h4>
-                        <span class="exp-date">Nov. – Déc. 2019</span>
+                        <h4 data-key="exp5_title">Superviseur d'Enquêtes</h4>
+                        <span class="exp-date" data-key="exp5_date">Nov. – Déc. 2019</span>
                     </div>
-                    <div class="exp-org">Stat Agency SART</div>
+                    <div class="exp-org" data-key="exp5_org">Stat Agency SART</div>
                     <ul>
-                        <li>Conception de questionnaire avec CSpro</li>
-                        <li>Apurement des données d'enquête avec Stata et SPSS</li>
+                        <li data-key="exp5_1">Conception de questionnaire avec CSpro</li>
+                        <li data-key="exp5_2">Apurement des données d'enquête avec Stata et SPSS</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== PUBLICATIONS ========== -->
-    <section class="section section-alt" id="publications">
+    <!-- ========== FORMATIONS PROPOSÉES (NOUVEAU) ========== -->
+    <section class="section section-alt" id="formations-proposees">
         <div class="container">
-            <span class="section-label hidden">Recherche</span>
-            <h2 class="section-title hidden">Mes <span>publications</span></h2>
-            <p class="section-subtitle hidden">Des travaux de recherche reconnus aux niveaux national et international.</p>
+            <span class="section-label hidden" data-key="training_offer_label">Prestations</span>
+            <h2 class="section-title hidden" data-key="training_offer_title">Formations en <span>Évaluation d'Impact</span></h2>
+            <p class="section-subtitle hidden" data-key="training_offer_subtitle">Des formations sur mesure en méthodes quantitatives d'évaluation d'impact, dispensées par un expert reconnu.</p>
+
+            <div class="training-offers">
+
+                <!-- Formation 1 -->
+                <div class="training-card hidden">
+                    <div class="training-header">
+                        <h4 data-key="train_offer1_title">Méthodes Expérimentales &amp; Quasi-Expérimentales</h4>
+                        <div class="training-sub" data-key="train_offer1_sub">Évaluation d'impact – Niveau Avancé</div>
+                    </div>
+                    <div class="training-body">
+                        <ul>
+                            <li data-key="train_offer1_1">Double Différence (DiD) et modèles à effets fixes</li>
+                            <li data-key="train_offer1_2">Matching par Score de Propension (PSM)</li>
+                            <li data-key="train_offer1_3">Score de Propension Généralisé (GPS)</li>
+                            <li data-key="train_offer1_4">Régression par Discontinuité (RDD)</li>
+                            <li data-key="train_offer1_5">Méthode de Contrôle Synthétique (SCM)</li>
+                            <li data-key="train_offer1_6">Synthétique Double Différence (SDID)</li>
+                        </ul>
+                    </div>
+                    <div class="training-pricing">
+                        <div class="price-item">
+                            <div class="amount">350 000</div>
+                            <div class="currency">FCFA</div>
+                            <div class="label">Prix HT</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="amount">530</div>
+                            <div class="currency">€</div>
+                            <div class="label">Prix HT</div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="training-cta" data-key="train_offer_cta">📩 Demander un devis</a>
+                </div>
+
+                <!-- Formation 2 -->
+                <div class="training-card hidden">
+                    <div class="training-header">
+                        <h4 data-key="train_offer2_title">Économétrie Appliquée &amp; Data Science</h4>
+                        <div class="training-sub" data-key="train_offer2_sub">Analyse de données – Niveau Intermédiaire</div>
+                    </div>
+                    <div class="training-body">
+                        <ul>
+                            <li data-key="train_offer2_1">Modélisation économétrique avec R et Python</li>
+                            <li data-key="train_offer2_2">Analyse de données de panel et de séries temporelles</li>
+                            <li data-key="train_offer2_3">Évaluation d'impact sur données d'enquête</li>
+                            <li data-key="train_offer2_4">Visualisation et communication des résultats</li>
+                            <li data-key="train_offer2_5">Cas pratiques sur données réelles</li>
+                            <li data-key="train_offer2_6">Interprétation économique des résultats</li>
+                        </ul>
+                    </div>
+                    <div class="training-pricing">
+                        <div class="price-item">
+                            <div class="amount">250 000</div>
+                            <div class="currency">FCFA</div>
+                            <div class="label">Prix HT</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="amount">380</div>
+                            <div class="currency">€</div>
+                            <div class="label">Prix HT</div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="training-cta" data-key="train_offer_cta">📩 Demander un devis</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PUBLICATIONS ========== -->
+    <section class="section" id="publications">
+        <div class="container">
+            <span class="section-label hidden" data-key="pub_label">Recherche</span>
+            <h2 class="section-title hidden" data-key="pub_title">Mes <span>publications</span></h2>
+            <p class="section-subtitle hidden" data-key="pub_subtitle">Des travaux de recherche reconnus aux niveaux national et international.</p>
 
             <div class="pub-grid">
-                <!-- Ouvrage -->
                 <div class="pub-card hidden">
-                    <div class="pub-type">📘 Ouvrage</div>
+                    <div class="pub-type" data-key="pub_type_book">📘 Ouvrage</div>
                     <h4>Évaluation économétrique des effets : Théorie et application en contexte sénégalais</h4>
                     <div class="pub-meta">Boina, Y. (2023). Éditions Universitaires Européennes. ISBN 978-6203447866</div>
-                    <a href="https://www.amazon.de/%C3%89valuation-%C3%A9conom%C3%A9trique-effets-application-s%C3%A9n%C3%A9galais/dp/6203447862" target="_blank" class="pub-link">📖 Voir sur Amazon →</a>
+                    <a href="https://www.amazon.de/%C3%89valuation-%C3%A9conom%C3%A9trique-effets-application-s%C3%A9n%C3%A9galais/dp/6203447862" target="_blank" class="pub-link" data-key="pub_link_amazon">📖 Voir sur Amazon →</a>
                 </div>
 
-                <!-- Working Paper -->
                 <div class="pub-card hidden">
-                    <div class="pub-type">📄 Working Paper</div>
+                    <div class="pub-type" data-key="pub_type_wp">📄 Working Paper</div>
                     <h4>Digital transformation and labor market dynamics in Sub-Saharan Africa: Evidence from Senegal's Emerging Plan</h4>
                     <div class="pub-meta">Boina, Y. (2026). Working Paper No. 110. DOI: 10.69814/wp/2025110</div>
-                    <a href="https://www.gdn.int/digital-transformation-and-labor-market-dynamics-sub-saharan-africa-evidence-senegal%E2%80%99s-emerging-plan" target="_blank" class="pub-link">📄 Lire le working paper →</a>
+                    <a href="https://www.gdn.int/digital-transformation-and-labor-market-dynamics-sub-saharan-africa-evidence-senegal%E2%80%99s-emerging-plan" target="_blank" class="pub-link" data-key="pub_link_wp">📄 Lire le working paper →</a>
                 </div>
 
-                <!-- Article accepté -->
                 <div class="pub-card hidden">
-                    <div class="pub-type">📄 Article (accepté)</div>
-                    <h4>Impact du Plan Sénégal Émergent : Analyse des Secteurs Clés du Marché du Travail</h4>
-                    <div class="pub-meta">Revue économique (acceptation définitive)</div>
+                    <div class="pub-type" data-key="pub_type_accepted">📄 Article (accepté)</div>
+                    <h4 data-key="pub_title_accepted">Impact du Plan Sénégal Émergent : Analyse des Secteurs Clés du Marché du Travail</h4>
+                    <div class="pub-meta" data-key="pub_meta_accepted">Revue économique (acceptation définitive)</div>
                 </div>
 
-                <!-- Article UN -->
                 <div class="pub-card hidden">
                     <div class="pub-type">📄 Article</div>
                     <h4>Impact of digital development on the labor market in Senegal</h4>
@@ -1581,31 +1749,27 @@
                     <a href="https://www.un.org/ohrlls/sites/www.un.org.ohrlls/files/29_yasser_boina_2.pdf" target="_blank" class="pub-link">📄 Lire l'article →</a>
                 </div>
 
-                <!-- Actes CEID 2024 -->
                 <div class="pub-card hidden">
-                    <div class="pub-type">📄 Actes de conférence</div>
-                    <h4>Analyse des répercussions distributives de la Nouvelle Politique Nationale de l'Emploi au Sénégal</h4>
-                    <div class="pub-meta">CEID 2024, Dakar (30-31 mai)</div>
+                    <div class="pub-type" data-key="pub_type_proceedings">📄 Actes de conférence</div>
+                    <h4 data-key="pub_title_conf1">Analyse des répercussions distributives de la Nouvelle Politique Nationale de l'Emploi au Sénégal</h4>
+                    <div class="pub-meta" data-key="pub_meta_conf1">CEID 2024, Dakar (30-31 mai)</div>
                     <a href="https://ceid2024.ucad.sn/storage/actes_ceid/Texte-9-Actes-3e-CEID.pdf" target="_blank" class="pub-link">📄 Lire l'article →</a>
                 </div>
 
-                <!-- Actes CEID 2023 -->
                 <div class="pub-card hidden">
-                    <div class="pub-type">📄 Actes de conférence</div>
-                    <h4>Impact des Politiques Actives du Marché du Travail au Sénégal</h4>
-                    <div class="pub-meta">CEID 2023, Dakar (2-3 mai)</div>
+                    <div class="pub-type" data-key="pub_type_proceedings">📄 Actes de conférence</div>
+                    <h4 data-key="pub_title_conf2">Impact des Politiques Actives du Marché du Travail au Sénégal</h4>
+                    <div class="pub-meta" data-key="pub_meta_conf2">CEID 2023, Dakar (2-3 mai)</div>
                     <a href="https://ceid2023.ucad.sn/storage/actes_ceid/Texte36-%20Yasser%20Boina.pdf" target="_blank" class="pub-link">📄 Lire l'article →</a>
                 </div>
 
-                <!-- Synthèse RFE -->
                 <div class="pub-card hidden">
-                    <div class="pub-type">📄 Synthèse</div>
-                    <h4>Évaluation économétrique des effets : théorie et application en contexte sénégalais</h4>
-                    <div class="pub-meta">Synthèse RFE #30, décembre 2022</div>
+                    <div class="pub-type" data-key="pub_type_synthesis">📄 Synthèse</div>
+                    <h4 data-key="pub_title_synthesis">Évaluation économétrique des effets : théorie et application en contexte sénégalais</h4>
+                    <div class="pub-meta" data-key="pub_meta_synthesis">Synthèse RFE #30, décembre 2022</div>
                     <a href="https://drive.google.com/file/d/1av0NcSff-LcIa9-8MMPCHYqgnrH5IwzR/view" target="_blank" class="pub-link">📄 Lire la synthèse →</a>
                 </div>
 
-                <!-- Présentation DIAL -->
                 <div class="pub-card hidden">
                     <div class="pub-type">📄 Présentation</div>
                     <h4>Analyse de l'impact des Politiques Actives du Marché du Travail sur la réduction de la durée de transition</h4>
@@ -1613,28 +1777,27 @@
                     <a href="https://dial.ird.fr/wp-content/uploads/2022/12/Presentation_Yasser_BOINA.pdf" target="_blank" class="pub-link">📄 Voir la présentation →</a>
                 </div>
 
-                <!-- Soumissions -->
                 <div class="pub-card hidden">
-                    <div class="pub-type">📄 Article (soumission)</div>
-                    <h4>Impact des appuis financiers à l'entrepreneuriat sur la performance économique au Sénégal : Cas du PAVIE</h4>
-                    <div class="pub-meta">Yasser B. &amp; Mamadou Laye N.</div>
+                    <div class="pub-type" data-key="pub_type_submitted">📄 Article (soumission)</div>
+                    <h4 data-key="pub_title_submitted1">Impact des appuis financiers à l'entrepreneuriat sur la performance économique au Sénégal : Cas du PAVIE</h4>
+                    <div class="pub-meta" data-key="pub_meta_submitted1">Yasser B. &amp; Mamadou Laye N.</div>
                 </div>
 
                 <div class="pub-card hidden">
-                    <div class="pub-type">📄 Article (soumission)</div>
+                    <div class="pub-type" data-key="pub_type_submitted">📄 Article (soumission)</div>
                     <h4>Spatial Anchoring and the Performance of Informal Microenterprises in Senegal</h4>
                     <div class="pub-meta">Yasser B. &amp; Serigne Bassirou L.</div>
                 </div>
 
                 <div class="pub-card hidden">
-                    <div class="pub-type">📄 Article (soumission)</div>
-                    <h4>Impact des programmes de formation sur la qualité de l'emploi des jeunes en Afrique subsaharienne</h4>
+                    <div class="pub-type" data-key="pub_type_submitted">📄 Article (soumission)</div>
+                    <h4 data-key="pub_title_submitted3">Impact des programmes de formation sur la qualité de l'emploi des jeunes en Afrique subsaharienne</h4>
                     <div class="pub-meta">Yasser B.</div>
                 </div>
 
                 <div class="pub-card hidden">
-                    <div class="pub-type">📄 Article (soumission)</div>
-                    <h4>Dynamique des Transitions du Chômage et Stratégies de Recherche d'Emploi sur le Marché du Travail Sénégalais</h4>
+                    <div class="pub-type" data-key="pub_type_submitted">📄 Article (soumission)</div>
+                    <h4 data-key="pub_title_submitted4">Dynamique des Transitions du Chômage et Stratégies de Recherche d'Emploi sur le Marché du Travail Sénégalais</h4>
                     <div class="pub-meta">Yasser B. &amp; Abdou T.</div>
                 </div>
             </div>
@@ -1644,19 +1807,18 @@
     <!-- ========== CONFÉRENCES ========== -->
     <section class="section" id="conferences">
         <div class="container">
-            <span class="section-label hidden">Rayonnement</span>
-            <h2 class="section-title hidden">Conférences <span>internationales</span></h2>
-            <p class="section-subtitle hidden">17 conférences nationales, en ligne et internationales.</p>
+            <span class="section-label hidden" data-key="conf_label">Rayonnement</span>
+            <h2 class="section-title hidden" data-key="conf_title">Conférences <span>internationales</span></h2>
+            <p class="section-subtitle hidden" data-key="conf_subtitle">17 conférences nationales, en ligne et internationales.</p>
 
-            <!-- CONFÉRENCES INTERNATIONALES (5) -->
-            <h3 class="conf-section-title">🌍 Conférences <span>Internationales</span></h3>
+            <h3 class="conf-section-title" data-key="conf_intl_title">🌍 Conférences <span>Internationales</span></h3>
             <div class="conf-grid">
 
                 <div class="conf-card international hidden">
                     <span class="conf-year">Juillet 2026</span>
-                    <h4>Forum Ouest-Africain sur les Transformations Numériques</h4>
-                    <div class="conf-location">📍 Cotonou, Bénin</div>
-                    <div class="conf-desc">Communication sélectionnée. Présentation de l'impact du développement du numérique sur le marché du travail au Sénégal. Discutant scientifique et auteur d'un rapport de référé.</div>
+                    <h4 data-key="conf_intl1_title">Forum Ouest-Africain sur les Transformations Numériques</h4>
+                    <div class="conf-location" data-key="conf_intl1_loc">📍 Cotonou, Bénin</div>
+                    <div class="conf-desc" data-key="conf_intl1_desc">Communication sélectionnée. Présentation de l'impact du développement du numérique sur le marché du travail au Sénégal. Discutant scientifique.</div>
                     <div class="conf-badge international-badge">🌍 International</div>
                 </div>
 
@@ -1672,7 +1834,7 @@
                     <span class="conf-year">Mai 2026</span>
                     <h4>4th LDC Future Forum – UNU-WIDER</h4>
                     <div class="conf-location">📍 Helsinki, Finlande</div>
-                    <div class="conf-desc">Sélection CAPTIVATE. Présentation sur la transformation numérique et le marché du travail en Afrique. Méthode SDID sur panel de 17 pays.</div>
+                    <div class="conf-desc">Sélection CAPTIVATE. Présentation sur la transformation numérique et le marché du travail en Afrique. Méthode SDID.</div>
                     <div class="conf-badge international-badge">🌍 International</div>
                 </div>
 
@@ -1694,8 +1856,7 @@
 
             </div>
 
-            <!-- CONFÉRENCES NATIONALES ET EN LIGNE (12) -->
-            <h3 class="conf-section-title" style="margin-top:50px;">🇸🇳 Conférences <span>Nationales &amp; En Ligne</span></h3>
+            <h3 class="conf-section-title" style="margin-top:50px;" data-key="conf_nat_title">🇸🇳 Conférences <span>Nationales &amp; En Ligne</span></h3>
             <div class="conf-grid">
 
                 <div class="conf-card hidden">
@@ -1787,30 +1948,30 @@
     <!-- ========== FORMATIONS COMPLÉMENTAIRES ========== -->
     <section class="section section-alt" id="formations">
         <div class="container">
-            <span class="section-label hidden">Perfectionnement</span>
-            <h2 class="section-title hidden">Formations <span>complémentaires</span></h2>
-            <p class="section-subtitle hidden">Un engagement continu dans le renforcement des compétences.</p>
+            <span class="section-label hidden" data-key="train_label">Perfectionnement</span>
+            <h2 class="section-title hidden" data-key="train_title">Formations <span>complémentaires</span></h2>
+            <p class="section-subtitle hidden" data-key="train_subtitle">Un engagement continu dans le renforcement des compétences.</p>
 
             <div class="exp-grid" style="grid-template-columns:1fr 1fr 1fr;">
                 <div class="exp-card hidden" style="border-left-color:var(--accent);">
-                    <h4>Cadre d'auto-évaluation (CAF) et participation citoyenne</h4>
-                    <div class="exp-org">GIZ – Dakar (fév. 2025)</div>
+                    <h4 data-key="train1_title">Cadre d'auto-évaluation (CAF) et participation citoyenne</h4>
+                    <div class="exp-org" data-key="train1_org">GIZ – Dakar (fév. 2025)</div>
                 </div>
                 <div class="exp-card hidden" style="border-left-color:var(--accent);">
-                    <h4>Méthodes Économétriques d'Évaluation d'Impact</h4>
-                    <div class="exp-org">Univ. Laval &amp; UCAD – Dakar (avr.-mai 2024)</div>
+                    <h4 data-key="train2_title">Méthodes Économétriques d'Évaluation d'Impact</h4>
+                    <div class="exp-org" data-key="train2_org">Univ. Laval &amp; UCAD – Dakar (avr.-mai 2024)</div>
                 </div>
                 <div class="exp-card hidden" style="border-left-color:var(--accent);">
-                    <h4>Evaluation of Development Policies</h4>
-                    <div class="exp-org">IFAD/ICID (en ligne, juin-juil. 2023)</div>
+                    <h4 data-key="train3_title">Evaluation of Development Policies</h4>
+                    <div class="exp-org" data-key="train3_org">IFAD/ICID (en ligne, juin-juil. 2023)</div>
                 </div>
                 <div class="exp-card hidden" style="border-left-color:var(--accent);">
-                    <h4>Compétences numériques et entrepreneuriales</h4>
-                    <div class="exp-org">TECH@WORK/Microsoft – Dakar (mai-août 2023)</div>
+                    <h4 data-key="train4_title">Compétences numériques et entrepreneuriales</h4>
+                    <div class="exp-org" data-key="train4_org">TECH@WORK/Microsoft – Dakar (mai-août 2023)</div>
                 </div>
                 <div class="exp-card hidden" style="border-left-color:var(--accent);">
-                    <h4>Évaluation d'impact comme instrument de politique</h4>
-                    <div class="exp-org">Georgetown Univ. / Banque mondiale (en ligne, 2023)</div>
+                    <h4 data-key="train5_title">Évaluation d'impact comme instrument de politique</h4>
+                    <div class="exp-org" data-key="train5_org">Georgetown Univ. / Banque mondiale (en ligne, 2023)</div>
                 </div>
             </div>
         </div>
@@ -1819,16 +1980,16 @@
     <!-- ========== CONTACT ========== -->
     <section class="contact-section" id="contact">
         <div class="container">
-            <span class="section-label hidden" style="color:var(--secondary-light);">Connexion</span>
-            <h2 class="section-title hidden">Parlons <span>de vos projets</span></h2>
-            <p class="section-subtitle hidden" style="max-width:600px;margin-bottom:32px;">
+            <span class="section-label hidden" style="color:var(--secondary-light);" data-key="contact_label">Connexion</span>
+            <h2 class="section-title hidden" data-key="contact_title">Parlons <span>de vos projets</span></h2>
+            <p class="section-subtitle hidden" style="max-width:600px;margin-bottom:32px;" data-key="contact_subtitle">
                 Je suis ouvert aux collaborations de recherche, aux missions d'évaluation et aux opportunités
                 de conseil en politique économique.
             </p>
 
             <div class="contact-grid">
                 <div class="contact-info hidden">
-                    <h4>📬 Me joindre</h4>
+                    <h4 data-key="contact_me_title">📬 Me joindre</h4>
                     <div class="contact-item">
                         <span class="emoji">📧</span>
                         <a href="mailto:Yasser.boina@yahoo.com">Yasser.boina@yahoo.com</a>
@@ -1843,7 +2004,7 @@
                     </div>
 
                     <div style="margin-top:24px;">
-                        <h4>🌐 Retrouvez-moi sur les réseaux</h4>
+                        <h4 data-key="contact_social_title">🌐 Retrouvez-moi sur les réseaux</h4>
                         <div class="contact-socials">
                             <a href="https://www.linkedin.com/in/boina-yasser-49069422b" target="_blank" class="social-icon-link" title="LinkedIn" style="font-size:20px;">🔗</a>
                             <a href="https://www.facebook.com/share/1HaT33m3EK/?mibextid=wwXIfr" target="_blank" class="social-icon-link" title="Facebook" style="font-size:20px;">📘</a>
@@ -1853,28 +2014,28 @@
                     </div>
 
                     <div style="margin-top:24px;">
-                        <h4>🌍 Associations</h4>
-                        <p style="color:rgba(255,255,255,0.7);font-size:15px;">
+                        <h4 data-key="contact_assoc_title">🌍 Associations</h4>
+                        <p style="color:rgba(255,255,255,0.7);font-size:15px;" data-key="contact_assoc_text">
                             Membre actif de l'<strong style="color:var(--secondary-light);">Association Sénégalaise d'Évaluation (SÉNÉVAL)</strong> depuis 2020.
                         </p>
                     </div>
                 </div>
 
                 <div class="contact-refs hidden">
-                    <h4>📋 Références</h4>
+                    <h4 data-key="contact_refs_title">📋 Références</h4>
                     <div class="ref">
                         <div class="name">Zipporah Dione</div>
-                        <div class="role">Présidente Antenne Sénégal du ROAJELF</div>
+                        <div class="role" data-key="ref1_role">Présidente Antenne Sénégal du ROAJELF</div>
                         <div class="email">zdndione@gmail.com · +221 77 363 25 21</div>
                     </div>
                     <div class="ref">
                         <div class="name">Aliou Ndiaye</div>
-                        <div class="role">Responsable Suivi et Évaluation au CIGASS</div>
+                        <div class="role" data-key="ref2_role">Responsable Suivi et Évaluation au CIGASS</div>
                         <div class="email">aliou.ndiaye10@yahoo.fr · +221 77 446 05 88</div>
                     </div>
                     <div class="ref">
                         <div class="name">Abou Kan</div>
-                        <div class="role">Assesseur de la FASEG, UCAD</div>
+                        <div class="role" data-key="ref3_role">Assesseur de la FASEG, UCAD</div>
                         <div class="email">abou.kan@ucad.edu.sn · +221 77 528 02 00</div>
                     </div>
                 </div>
@@ -1885,7 +2046,7 @@
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container">
-            <p>© 2026 <span>Yasser Boina</span> · Économiste &amp; Expert en Suivi-Évaluation · Fait avec ❤️ à Dakar</p>
+            <p>© 2026 <span>Yasser Boina</span> · <span data-key="footer_text">Économiste &amp; Expert en Suivi-Évaluation</span> · Fait avec ❤️ à Dakar</p>
         </div>
     </footer>
 
@@ -1935,70 +2096,417 @@
         });
 
         // ============================
-        // 4. LANGUAGE TOGGLE (FR/EN)
+        // 4. LANGUAGE TOGGLE (FR/EN) - CORRIGÉ
         // ============================
-        // Traductions simplifiées pour les éléments clés
         const translations = {
             fr: {
-                hero_subtitle: "Économiste · Expert en Suivi & Évaluation · Chercheur",
-                hero_description: "Professionnel dynamique et polyvalent, je combine une solide expertise en analyse de données, modélisation statistique et évaluation d'impact. Ma passion : transformer les données en décisions stratégiques pour un développement durable.",
+                // Navigation
                 nav_about: "À propos",
                 nav_education: "Formation",
                 nav_skills: "Compétences",
                 nav_experience: "Expériences",
                 nav_publications: "Publications",
                 nav_conferences: "Conférences",
+                nav_training: "Formations",
                 nav_contact: "Me contacter",
+
+                // Hero
+                hero_subtitle: "Économiste · Expert en Suivi & Évaluation · Chercheur",
+                hero_description: "Professionnel dynamique et polyvalent, je combine une solide expertise en analyse de données, modélisation statistique et évaluation d'impact. Ma passion : transformer les données en décisions stratégiques pour un développement durable.",
                 btn_publications: "Voir mes publications",
                 btn_contact: "Me contacter",
                 stat_experience: "Années d'expérience",
                 stat_publications: "Publications & articles",
                 stat_conferences: "Conférences",
+
+                // About
                 about_label: "À propos",
                 about_title: "Qui suis-je",
+                about_p1: "Je suis Yasser Boina, économiste et doctorant à l'Université Cheikh Anta Diop de Dakar. Ma carrière est dédiée à l'application rigoureuse des méthodes quantitatives pour évaluer l'impact des politiques publiques, particulièrement dans les domaines de l'emploi, du développement numérique et de l'entrepreneuriat.",
+                about_p2: "Fort d'une expérience en tant que Responsable Suivi-Évaluation au ROAJELF et Chercheur au Laboratoire d'Économie Publique, je maîtrise l'ensemble de la chaîne de valeur des données : de la collecte sur le terrain (Kobotoolbox, ODK) à la modélisation avancée (R, Python, STATA), en passant par la communication stratégique des résultats.",
+                about_p3: "Membre actif de l'Association Sénégalaise d'Évaluation (SÉNÉVAL), je suis animé par la conviction que des politiques publiques fondées sur des preuves empiriques sont la clé d'un développement inclusif et durable en Afrique.",
+                about_status_label: "🎓 Statut",
+                about_status_value: "Doctorant en Sciences Économiques",
+                about_lang_label: "📖 Langues",
+                about_lang_value: "Français (courant), Anglais (intermédiaire), Arabe (intermédiaire)",
+
+                // Education
                 edu_label: "Parcours académique",
                 edu_title: "Ma formation",
+                edu_subtitle: "Un parcours d'excellence en économie et statistique à l'UCAD.",
+                edu_date1: "Depuis 2022",
+                edu_title1: "Doctorat en Sciences Économiques",
+                edu_inst1: "Université Cheikh Anta Diop de Dakar (UCAD)",
+                edu_desc1: "Sujet de thèse : « Essais sur les politiques publiques d'emploi au Sénégal ». Utilisation de méthodes économétriques avancées (SDID, GPS) et de données de panel.",
+                edu_date2: "2020 – 2021",
+                edu_title2: "Master II – Ingénierie en Statistique Économique et Finance",
+                edu_inst2: "Université Cheikh Anta Diop de Dakar (UCAD)",
+                edu_desc2: "Spécialisation en modélisation statistique, économétrie financière et analyse des risques.",
+                edu_date3: "2018 – 2019",
+                edu_title3: "Licence 3 – Analyse Statistique Économique et Finance",
+                edu_inst3: "Université Cheikh Anta Diop de Dakar (UCAD)",
+                edu_desc3: "Formation approfondie en statistique, économétrie, et analyse de données économiques et financières.",
+                edu_date4: "2015 – 2016",
+                edu_title4: "Baccalauréat Série D (Scientifique)",
+                edu_inst4: "JUWA d'Ivembeni, Comores",
+                edu_desc4: "Baccalauréat scientifique avec mention, spécialité mathématiques.",
+
+                // Skills
                 skills_label: "Expertise",
                 skills_title: "Mes compétences",
+                skills_subtitle: "Un ensemble de compétences techniques et méthodologiques au service de l'évaluation et de la recherche.",
+                skill1_title: "Analyse de Données",
+                skill1_1: "Recueil & nettoyage",
+                skill1_2: "Analyse économique",
+                skill1_3: "Interprétation financière",
+                skill1_4: "Visualisation",
+                skill2_title: "Modélisation Statistique",
+                skill2_1: "Prévision économique",
+                skill2_2: "Évaluation d'impact",
+                skill2_3: "Méthodes quantitatives",
+                skill2_4: "Méthodes qualitatives",
+                skill3_title: "Programmation & Outils",
+                skill4_title: "Suivi & Évaluation",
+                skill4_1: "Conception de S&E",
+                skill4_2: "Indicateurs de performance",
+                skill4_3: "Évaluations d'impact",
+                skill4_4: "Rapports stratégiques",
+                skill5_title: "Communication & Présentation",
+                skill5_1: "Présentation de données",
+                skill5_2: "Rédaction scientifique",
+                skill5_3: "Recommandations politiques",
+                skill5_4: "Formation",
+                skill6_title: "Domaines d'application",
+                skill6_1: "Marché du travail",
+                skill6_2: "Transformation numérique",
+                skill6_3: "Entrepreneuriat",
+                skill6_4: "Politiques de développement",
+                skill6_5: "Économie africaine",
+
+                // Experiences
                 exp_label: "Carrière",
                 exp_title: "Expériences professionnelles",
+                exp_subtitle: "Un parcours riche au service du développement en Afrique.",
+                exp1_title: "Responsable Suivi & Évaluation",
+                exp1_date: "Depuis 2025",
+                exp1_org: "Réseau Ouest Africain des Jeunes Femmes Leaders (ROAJELF) – Sénégal",
+                exp1_1: "Conception et pilotage du système de suivi-évaluation",
+                exp1_2: "Mise en œuvre d'outils de suivi et d'évaluation participatifs",
+                exp1_3: "Production d'analyses stratégiques et de rapports d'impact",
+                exp2_title: "Assistant en Suivi & Évaluation",
+                exp2_date: "Juil. 2024 – Janv. 2025",
+                exp2_org: "Centre International de Recherche et de Formation en Génomique Appliquée (CIGASS)",
+                exp2_1: "Analyse quantitative avancée et analyse de données massives",
+                exp2_2: "Suivi des indicateurs de performance",
+                exp2_3: "Mise en place d'un plan de travail annuel",
+                exp3_title: "Chercheur",
+                exp3_date: "Juil. 2023 – Aujourd'hui",
+                exp3_org: "Laboratoire d'Économie Publique (LEP) – UCAD",
+                exp3_1: "Analyse quantitative avancée et modélisation économique",
+                exp3_2: "Analyse de données massives",
+                exp3_3: "Rédaction et publication d'articles scientifiques",
+                exp4_title: "Stagiaire en Suivi-Évaluation",
+                exp4_date: "Janv. – Juin 2023",
+                exp4_org: "Ministère de la Santé et de l'Action Sociale du Sénégal (MSAS)",
+                exp4_1: "Collecte et analyse de données (ODK, ONA, CSpro, Kobotoolbox)",
+                exp4_2: "Rédaction de rapports et de recommandations",
+                exp4_3: "Suivi des indicateurs de performance",
+                exp4_4: "Utilisation d'outils statistiques : R, STATA, SPSS",
+                exp5_title: "Superviseur d'Enquêtes",
+                exp5_date: "Nov. – Déc. 2019",
+                exp5_org: "Stat Agency SART",
+                exp5_1: "Conception de questionnaire avec CSpro",
+                exp5_2: "Apurement des données d'enquête avec Stata et SPSS",
+
+                // Training Offers
+                training_offer_label: "Prestations",
+                training_offer_title: "Formations en Évaluation d'Impact",
+                training_offer_subtitle: "Des formations sur mesure en méthodes quantitatives d'évaluation d'impact, dispensées par un expert reconnu.",
+                train_offer1_title: "Méthodes Expérimentales & Quasi-Expérimentales",
+                train_offer1_sub: "Évaluation d'impact – Niveau Avancé",
+                train_offer1_1: "Double Différence (DiD) et modèles à effets fixes",
+                train_offer1_2: "Matching par Score de Propension (PSM)",
+                train_offer1_3: "Score de Propension Généralisé (GPS)",
+                train_offer1_4: "Régression par Discontinuité (RDD)",
+                train_offer1_5: "Méthode de Contrôle Synthétique (SCM)",
+                train_offer1_6: "Synthétique Double Différence (SDID)",
+                train_offer2_title: "Économétrie Appliquée & Data Science",
+                train_offer2_sub: "Analyse de données – Niveau Intermédiaire",
+                train_offer2_1: "Modélisation économétrique avec R et Python",
+                train_offer2_2: "Analyse de données de panel et de séries temporelles",
+                train_offer2_3: "Évaluation d'impact sur données d'enquête",
+                train_offer2_4: "Visualisation et communication des résultats",
+                train_offer2_5: "Cas pratiques sur données réelles",
+                train_offer2_6: "Interprétation économique des résultats",
+                train_offer_cta: "📩 Demander un devis",
+
+                // Publications
                 pub_label: "Recherche",
                 pub_title: "Mes publications",
+                pub_subtitle: "Des travaux de recherche reconnus aux niveaux national et international.",
+                pub_type_book: "📘 Ouvrage",
+                pub_type_wp: "📄 Working Paper",
+                pub_type_accepted: "📄 Article (accepté)",
+                pub_type_proceedings: "📄 Actes de conférence",
+                pub_type_synthesis: "📄 Synthèse",
+                pub_type_submitted: "📄 Article (soumission)",
+                pub_link_amazon: "📖 Voir sur Amazon →",
+                pub_link_wp: "📄 Lire le working paper →",
+                pub_title_accepted: "Impact du Plan Sénégal Émergent : Analyse des Secteurs Clés du Marché du Travail",
+                pub_meta_accepted: "Revue économique (acceptation définitive)",
+                pub_title_conf1: "Analyse des répercussions distributives de la Nouvelle Politique Nationale de l'Emploi au Sénégal",
+                pub_meta_conf1: "CEID 2024, Dakar (30-31 mai)",
+                pub_title_conf2: "Impact des Politiques Actives du Marché du Travail au Sénégal",
+                pub_meta_conf2: "CEID 2023, Dakar (2-3 mai)",
+                pub_title_synthesis: "Évaluation économétrique des effets : théorie et application en contexte sénégalais",
+                pub_meta_synthesis: "Synthèse RFE #30, décembre 2022",
+                pub_title_submitted1: "Impact des appuis financiers à l'entrepreneuriat sur la performance économique au Sénégal : Cas du PAVIE",
+                pub_meta_submitted1: "Yasser B. & Mamadou Laye N.",
+                pub_title_submitted3: "Impact des programmes de formation sur la qualité de l'emploi des jeunes en Afrique subsaharienne",
+                pub_title_submitted4: "Dynamique des Transitions du Chômage et Stratégies de Recherche d'Emploi sur le Marché du Travail Sénégalais",
+
+                // Conferences
                 conf_label: "Rayonnement",
                 conf_title: "Conférences internationales",
+                conf_subtitle: "17 conférences nationales, en ligne et internationales.",
+                conf_intl_title: "🌍 Conférences Internationales",
+                conf_intl1_title: "Forum Ouest-Africain sur les Transformations Numériques",
+                conf_intl1_loc: "📍 Cotonou, Bénin",
+                conf_intl1_desc: "Communication sélectionnée. Présentation de l'impact du développement du numérique sur le marché du travail au Sénégal. Discutant scientifique.",
+                conf_nat_title: "🇸🇳 Conférences Nationales & En Ligne",
+
+                // Training
+                train_label: "Perfectionnement",
+                train_title: "Formations complémentaires",
+                train_subtitle: "Un engagement continu dans le renforcement des compétences.",
+                train1_title: "Cadre d'auto-évaluation (CAF) et participation citoyenne",
+                train1_org: "GIZ – Dakar (fév. 2025)",
+                train2_title: "Méthodes Économétriques d'Évaluation d'Impact",
+                train2_org: "Univ. Laval & UCAD – Dakar (avr.-mai 2024)",
+                train3_title: "Evaluation of Development Policies",
+                train3_org: "IFAD/ICID (en ligne, juin-juil. 2023)",
+                train4_title: "Compétences numériques et entrepreneuriales",
+                train4_org: "TECH@WORK/Microsoft – Dakar (mai-août 2023)",
+                train5_title: "Évaluation d'impact comme instrument de politique",
+                train5_org: "Georgetown Univ. / Banque mondiale (en ligne, 2023)",
+
+                // Contact
                 contact_label: "Connexion",
                 contact_title: "Parlons de vos projets",
+                contact_subtitle: "Je suis ouvert aux collaborations de recherche, aux missions d'évaluation et aux opportunités de conseil en politique économique.",
+                contact_me_title: "📬 Me joindre",
+                contact_social_title: "🌐 Retrouvez-moi sur les réseaux",
+                contact_assoc_title: "🌍 Associations",
+                contact_assoc_text: "Membre actif de l'<strong style=\"color:var(--secondary-light);\">Association Sénégalaise d'Évaluation (SÉNÉVAL)</strong> depuis 2020.",
+                contact_refs_title: "📋 Références",
+                ref1_role: "Présidente Antenne Sénégal du ROAJELF",
+                ref2_role: "Responsable Suivi et Évaluation au CIGASS",
+                ref3_role: "Assesseur de la FASEG, UCAD",
                 footer_text: "Économiste & Expert en Suivi-Évaluation"
             },
             en: {
-                hero_subtitle: "Economist · Monitoring & Evaluation Expert · Researcher",
-                hero_description: "A dynamic and versatile professional combining strong expertise in data analysis, statistical modeling, and impact evaluation. My passion: turning data into strategic decisions for sustainable development.",
+                // Navigation
                 nav_about: "About",
                 nav_education: "Education",
                 nav_skills: "Skills",
                 nav_experience: "Experience",
                 nav_publications: "Publications",
                 nav_conferences: "Conferences",
+                nav_training: "Training",
                 nav_contact: "Contact me",
+
+                // Hero
+                hero_subtitle: "Economist · Monitoring & Evaluation Expert · Researcher",
+                hero_description: "A dynamic and versatile professional combining strong expertise in data analysis, statistical modeling, and impact evaluation. My passion: turning data into strategic decisions for sustainable development.",
                 btn_publications: "View my publications",
                 btn_contact: "Contact me",
                 stat_experience: "Years of experience",
                 stat_publications: "Publications & articles",
                 stat_conferences: "Conferences",
+
+                // About
                 about_label: "About",
                 about_title: "Who I am",
+                about_p1: "I am Yasser Boina, economist and PhD candidate at Cheikh Anta Diop University of Dakar. My career is dedicated to the rigorous application of quantitative methods to evaluate the impact of public policies, particularly in the areas of employment, digital development, and entrepreneurship.",
+                about_p2: "With experience as Monitoring & Evaluation Manager at ROAJELF and Researcher at the Laboratory of Public Economics, I master the entire data value chain: from field collection (Kobotoolbox, ODK) to advanced modeling (R, Python, STATA), through strategic communication of results.",
+                about_p3: "Active member of the Senegalese Evaluation Association (SÉNÉVAL), I am driven by the conviction that evidence-based public policies are key to inclusive and sustainable development in Africa.",
+                about_status_label: "🎓 Status",
+                about_status_value: "PhD Candidate in Economics",
+                about_lang_label: "📖 Languages",
+                about_lang_value: "French (fluent), English (intermediate), Arabic (intermediate)",
+
+                // Education
                 edu_label: "Academic Background",
                 edu_title: "My Education",
+                edu_subtitle: "A journey of excellence in economics and statistics at UCAD.",
+                edu_date1: "Since 2022",
+                edu_title1: "PhD in Economics",
+                edu_inst1: "Cheikh Anta Diop University of Dakar (UCAD)",
+                edu_desc1: "Ongoing thesis on active labor market policies in Senegal. Using advanced econometric methods (SDID, GPS) and panel data.",
+                edu_date2: "2020 – 2021",
+                edu_title2: "Master II – Engineering in Economic Statistics and Finance",
+                edu_inst2: "Cheikh Anta Diop University of Dakar (UCAD)",
+                edu_desc2: "Specialization in statistical modeling, financial econometrics, and risk analysis.",
+                edu_date3: "2018 – 2019",
+                edu_title3: "Bachelor's Degree – Economic Statistical Analysis and Finance",
+                edu_inst3: "Cheikh Anta Diop University of Dakar (UCAD)",
+                edu_desc3: "Advanced training in statistics, econometrics, and analysis of economic and financial data.",
+                edu_date4: "2015 – 2016",
+                edu_title4: "High School Diploma – Science Series D",
+                edu_inst4: "JUWA d'Ivembeni, Comoros",
+                edu_desc4: "Scientific high school diploma with honors, major in mathematics.",
+
+                // Skills
                 skills_label: "Expertise",
                 skills_title: "My Skills",
+                skills_subtitle: "A comprehensive set of technical and methodological skills for evaluation and research.",
+                skill1_title: "Data Analysis",
+                skill1_1: "Data collection & cleaning",
+                skill1_2: "Economic analysis",
+                skill1_3: "Financial interpretation",
+                skill1_4: "Data visualization",
+                skill2_title: "Statistical Modeling",
+                skill2_1: "Economic forecasting",
+                skill2_2: "Impact evaluation",
+                skill2_3: "Quantitative methods",
+                skill2_4: "Qualitative methods",
+                skill3_title: "Programming & Tools",
+                skill4_title: "Monitoring & Evaluation",
+                skill4_1: "M&E system design",
+                skill4_2: "Performance indicators",
+                skill4_3: "Impact evaluations",
+                skill4_4: "Strategic reporting",
+                skill5_title: "Communication & Presentation",
+                skill5_1: "Data presentation",
+                skill5_2: "Scientific writing",
+                skill5_3: "Policy recommendations",
+                skill5_4: "Training",
+                skill6_title: "Application Areas",
+                skill6_1: "Labor market",
+                skill6_2: "Digital transformation",
+                skill6_3: "Entrepreneurship",
+                skill6_4: "Development policies",
+                skill6_5: "African economy",
+
+                // Experiences
                 exp_label: "Career",
                 exp_title: "Professional Experience",
+                exp_subtitle: "A rich career serving development in Africa.",
+                exp1_title: "Monitoring & Evaluation Manager",
+                exp1_date: "Since 2025",
+                exp1_org: "West African Network of Young Women Leaders (ROAJELF) – Senegal",
+                exp1_1: "Design and management of the monitoring and evaluation system",
+                exp1_2: "Implementation of participatory M&E tools",
+                exp1_3: "Production of strategic analyses and impact reports",
+                exp2_title: "Monitoring & Evaluation Assistant",
+                exp2_date: "Jul. 2024 – Jan. 2025",
+                exp2_org: "International Center for Research and Training in Applied Genomics (CIGASS)",
+                exp2_1: "Advanced quantitative analysis and big data analysis",
+                exp2_2: "Monitoring of performance indicators",
+                exp2_3: "Development of annual work plans",
+                exp3_title: "Researcher",
+                exp3_date: "Jul. 2023 – Present",
+                exp3_org: "Laboratory of Public Economics (LPE) – UCAD",
+                exp3_1: "Advanced quantitative analysis and economic modeling",
+                exp3_2: "Big data analysis",
+                exp3_3: "Writing and publication of scientific articles",
+                exp4_title: "Monitoring & Evaluation Intern",
+                exp4_date: "Jan. – Jun. 2023",
+                exp4_org: "Ministry of Health and Social Action of Senegal (MSAS)",
+                exp4_1: "Data collection and analysis (ODK, ONA, CSpro, Kobotoolbox)",
+                exp4_2: "Report writing and recommendations",
+                exp4_3: "Monitoring of performance indicators",
+                exp4_4: "Use of statistical tools: R, STATA, SPSS",
+                exp5_title: "Survey Supervisor",
+                exp5_date: "Nov. – Dec. 2019",
+                exp5_org: "Stat Agency SART",
+                exp5_1: "Questionnaire design with CSpro",
+                exp5_2: "Survey data cleaning with Stata and SPSS",
+
+                // Training Offers
+                training_offer_label: "Services",
+                training_offer_title: "Impact Evaluation Training",
+                training_offer_subtitle: "Tailor-made training in quantitative impact evaluation methods, delivered by a recognized expert.",
+                train_offer1_title: "Experimental & Quasi-Experimental Methods",
+                train_offer1_sub: "Impact Evaluation – Advanced Level",
+                train_offer1_1: "Difference-in-Differences (DiD) and fixed effects models",
+                train_offer1_2: "Propensity Score Matching (PSM)",
+                train_offer1_3: "Generalized Propensity Score (GPS)",
+                train_offer1_4: "Regression Discontinuity Design (RDD)",
+                train_offer1_5: "Synthetic Control Method (SCM)",
+                train_offer1_6: "Synthetic Difference-in-Differences (SDID)",
+                train_offer2_title: "Applied Econometrics & Data Science",
+                train_offer2_sub: "Data Analysis – Intermediate Level",
+                train_offer2_1: "Econometric modeling with R and Python",
+                train_offer2_2: "Panel data and time series analysis",
+                train_offer2_3: "Impact evaluation on survey data",
+                train_offer2_4: "Data visualization and communication",
+                train_offer2_5: "Case studies on real data",
+                train_offer2_6: "Economic interpretation of results",
+                train_offer_cta: "📩 Request a quote",
+
+                // Publications
                 pub_label: "Research",
                 pub_title: "My Publications",
+                pub_subtitle: "Research works recognized at national and international levels.",
+                pub_type_book: "📘 Book",
+                pub_type_wp: "📄 Working Paper",
+                pub_type_accepted: "📄 Article (accepted)",
+                pub_type_proceedings: "📄 Conference proceedings",
+                pub_type_synthesis: "📄 Synthesis",
+                pub_type_submitted: "📄 Article (submitted)",
+                pub_link_amazon: "📖 View on Amazon →",
+                pub_link_wp: "📄 Read the working paper →",
+                pub_title_accepted: "Impact of the Senegal Emerging Plan: Analysis of Key Labor Market Sectors",
+                pub_meta_accepted: "Economic Review (accepted)",
+                pub_title_conf1: "Analysis of the distributive impacts of the New National Employment Policy in Senegal",
+                pub_meta_conf1: "CEID 2024, Dakar (May 30-31)",
+                pub_title_conf2: "Impact of Active Labor Market Policies in Senegal",
+                pub_meta_conf2: "CEID 2023, Dakar (May 2-3)",
+                pub_title_synthesis: "Econometric evaluation of effects: theory and application in the Senegalese context",
+                pub_meta_synthesis: "RFE Synthesis #30, December 2022",
+                pub_title_submitted1: "Impact of financial support for entrepreneurship on economic performance in Senegal: The PAVIE case",
+                pub_meta_submitted1: "Yasser B. & Mamadou Laye N.",
+                pub_title_submitted3: "Impact of training programs on youth employment quality in Sub-Saharan Africa",
+                pub_title_submitted4: "Dynamics of Unemployment Transitions and Job Search Strategies in the Senegalese Labor Market",
+
+                // Conferences
                 conf_label: "International Recognition",
                 conf_title: "International Conferences",
+                conf_subtitle: "17 national, online and international conferences.",
+                conf_intl_title: "🌍 International Conferences",
+                conf_intl1_title: "West African Forum on Digital Transformations",
+                conf_intl1_loc: "📍 Cotonou, Benin",
+                conf_intl1_desc: "Selected communication. Presentation on the impact of digital development on the labor market in Senegal. Scientific discussant.",
+                conf_nat_title: "🇸🇳 National & Online Conferences",
+
+                // Training
+                train_label: "Professional Development",
+                train_title: "Additional Training",
+                train_subtitle: "Continuous commitment to skill enhancement.",
+                train1_title: "Self-assessment Framework (CAF) and citizen participation",
+                train1_org: "GIZ – Dakar (Feb. 2025)",
+                train2_title: "Econometric Methods for Impact Evaluation",
+                train2_org: "Univ. Laval & UCAD – Dakar (Apr.-May 2024)",
+                train3_title: "Evaluation of Development Policies",
+                train3_org: "IFAD/ICID (online, Jun.-Jul. 2023)",
+                train4_title: "Digital and entrepreneurial skills",
+                train4_org: "TECH@WORK/Microsoft – Dakar (May-Aug. 2023)",
+                train5_title: "Impact evaluation as a development policy instrument",
+                train5_org: "Georgetown Univ. / World Bank (online, 2023)",
+
+                // Contact
                 contact_label: "Connect",
                 contact_title: "Let's talk about your projects",
+                contact_subtitle: "I am open to research collaborations, evaluation missions, and economic policy advisory opportunities.",
+                contact_me_title: "📬 Contact me",
+                contact_social_title: "🌐 Find me on social media",
+                contact_assoc_title: "🌍 Associations",
+                contact_assoc_text: "Active member of the <strong style=\"color:var(--secondary-light);\">Senegalese Evaluation Association (SÉNÉVAL)</strong> since 2020.",
+                contact_refs_title: "📋 References",
+                ref1_role: "President, Senegal Chapter of ROAJELF",
+                ref2_role: "Monitoring and Evaluation Manager at CIGASS",
+                ref3_role: "Assessor, FASEG, UCAD",
                 footer_text: "Economist & Monitoring & Evaluation Expert"
             }
         };
@@ -2009,15 +2517,22 @@
             currentLang = lang;
             localStorage.setItem('lang', lang);
 
-            // Traduire les éléments avec data-key
+            // Traduire tous les éléments avec data-key
             document.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
-                if (translations[lang] && translations[lang][key]) {
-                    el.textContent = translations[lang][key];
+                if (translations[lang] && translations[lang][key] !== undefined) {
+                    // Si c'est un lien, on garde le href mais on change le texte
+                    if (el.tagName === 'A' && el.classList.contains('pub-link')) {
+                        el.textContent = translations[lang][key];
+                    } else if (el.tagName === 'A' && el.classList.contains('training-cta')) {
+                        el.textContent = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
                 }
             });
 
-            // Mettre à jour les boutons
+            // Mettre à jour les boutons de langue
             document.querySelectorAll('.lang-toggle button').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.lang === lang);
             });
@@ -2025,12 +2540,14 @@
             document.documentElement.lang = lang;
         }
 
+        // Écouteurs sur les boutons de langue
         document.querySelectorAll('.lang-toggle button').forEach(btn => {
             btn.addEventListener('click', () => {
                 setLanguage(btn.dataset.lang);
             });
         });
 
+        // Appliquer la langue sauvegardée
         setLanguage(currentLang);
     </script>
 
